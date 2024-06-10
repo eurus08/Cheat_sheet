@@ -1,0 +1,41 @@
+#### Some simple command ####
+date - shows the current date and time
+echo - print a line of text to the stdout
+sort - used to sort a list(ex)
+man  - view man pages
+cp   - copy a file or directory
+clear- clear the terminal the screen
+which- locate a command
+cd   - change directory
+pwd  - show current working directory
+ls   - list the content of a directory
+touch- create or update the modiifcation time of a file
+mkdir- create a directory
+nano - a simple terminal text editor
+vim  - a rich terminal text editor 
+rm   - delete file or directories 
+mv   - move or rename files or dictories 
+less - display contents of a file
+cat  - concatenate the content of files and display the reseults
+tac  - concatenate and print in reverse
+rev  - display contents of a file in reverse
+head - show the beginning part of a file(ex)
+tail - show the ending part of a file (ex)
+wc   - show number of lines, words or characters in a file.
+tr   - 
+du   - estimate file space usage 
+tee  - 
+find - search for files.(ex)
+lscpu- show info about cpu
+lsmem- shoe info about ram
+
+
+
+
+
+
+
+
+### More specific commands###
+dmidecode --type 17	   -  Show detailed ram and ram slots info
+dmidecode -t processor 	   -  show detailed cpu info
