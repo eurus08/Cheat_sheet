@@ -1,0 +1,49 @@
+#### Some Configuration commands
+
+Command     | Option                                 | Description
+------------|----------------------------------------|---------------------------------------------------------------
+config      | --global user.name <username>          | Set Git user name globally.
+config      | --global user.email <email>            | Set Git user email globally.         
+config      | --global init.defaultBranch <branch>   | Set the default branch name globally.
+status      |                                        | Show the working tree status.
+init        |                                        | Create an empty Git repository or reinitialize an existing one.
+add         | <file(s)>                              | Add file contents to the staging area.
+add         | .                                      | Add changes to the staging area.
+commit      | -m "<message>"                         | Record changes to the repository with a message.
+commit      | --amend                                | Amend the previous commit with new changes or a new message.
+branch      |                                        | List branches.
+branch      | <branch> -v                            | Create a new branch Verboselly.
+branch      | -d <branch>                            | Delete a branch if it is merged.
+branch      | -D <branch>                            | Force delete a branch, even if it is unmerged.
+switch      | <branch>                               | Switch to the specified branch.
+switch      | -c <branch>                            | Create and switch to a new branch.
+diff        |                                        | Show changes between working directory and staging area.
+diff        | HEAD                                   | Show changes between working directory and last commit.
+diff        | HEAD <file(s)>                         | Show changes between working directory and last commit for specific files.
+diff        | --staged                               | Show changes between staged changes and last commit.
+diff        | --staged <file(s)>                     | Show staged changes for specific files compared to the last commit.
+diff        | [branch...]                            | Show changes between the current branch and other branches.
+diff        | [commit...]                            | Show changes between the current commit and other commits.
+stash       |                                        | Stash changes in the working directory that are not ready to commit.
+stash       | -u                                     | Stash untracked files along with tracked files.
+stash       | pop                                    | Apply the most recent stash and remove it from the stash list.
+stash       | apply                                  | Apply a stash without removing it from the stash list.
+stash       | list                                   | List all stashed changes.
+stash       | drop <file>                            | Remove a specific stash from the list.
+stash       | clear                                  | Remove all stashes.
+log         |                                        | Show the commit history.
+log         | --oneline                              | Show the commit history in a condensed format.
+checkout    | <commit>                               | Switch to a specific commit or branch.
+checkout    | HEAD~<1>                               | Switch to the parent commit of HEAD.
+checkout    | HEAD <file(s)>                         | Check out specific files from the latest commit.
+checkout    | -- <file(s)>                           | Discard changes in the working directory for specific files.      
+restore     |                                        | Restore working directory files from the staging area.                   
+restore     | <file(s)>                              | Restore specific files to the working directory from the staging area.   
+restore     | --source HEAD~<commit>                 | Restore files from a specific commit to the working directory.    
+restore     | --staged <file(s)>                     | Unstage specific files but retain changes in the working directory. 
+reset       | <commit>                               | Reset the current branch to a specific commit.                    
+reset       | --hard <commit>                        | Reset the current branch to a specific commit and discard all changes. 
+reset       | HEAD~<1>                               | Reset the current branch to the parent of the latest commit.      
+revert      | <commit>                               | Create a new commit that reverts changes made by a specific commit. 
+revert      | HEAD~<1>                               | Create a new commit that reverts the latest commit.               
+
