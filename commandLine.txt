@@ -37,5 +37,7 @@ lsmem- shoe info about ram
 
 
 ### More specific commands###
-dmidecode --type 17	   -  Show detailed ram and ram slots info
+dmidecode --type 17	       -  Show detailed ram and ram slots info
 dmidecode -t processor 	   -  show detailed cpu info
+rm !(<file>)               -  Remove all files in a directory expect for <file> 
+shopt -s extglob           -  Enable use of extended patterns

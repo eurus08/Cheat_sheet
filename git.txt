@@ -1,4 +1,4 @@
-#### Some Configuration commands
+#### Some git commands
 
 Command     | Option                                 | Description
 ------------|----------------------------------------|---------------------------------------------------------------
@@ -9,7 +9,7 @@ status      |                                        | Show the working tree sta
 init        |                                        | Create an empty Git repository or reinitialize an existing one.
 add         | <file(s)>                              | Add file contents to the staging area.
 add         | .                                      | Add changes to the staging area.
-commit      | -m "<message>"                         | Record changes to the repository with a message.
+commit      | -m <message>                           | Record changes to the repository with a message.
 commit      | --amend                                | Amend the previous commit with new changes or a new message.
 branch      |                                        | List branches.
 branch      | <branch> -v                            | Create a new branch Verboselly.
