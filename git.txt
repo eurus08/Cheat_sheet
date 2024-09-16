@@ -15,6 +15,7 @@ branch      |                                        | List branches.
 branch      | <branch> -v                            | Create a new branch Verboselly.
 branch      | -d <branch>                            | Delete a branch if it is merged.
 branch      | -D <branch>                            | Force delete a branch, even if it is unmerged.
+branch      | -m <new name>                          | Rename a branch
 switch      | <branch>                               | Switch to the specified branch.
 switch      | -c <branch>                            | Create and switch to a new branch.
 diff        |                                        | Show changes between working directory and staging area.
