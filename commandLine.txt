@@ -27,8 +27,8 @@ du   - estimate file space usage
 tee  - 
 find - search for files.(ex)
 lscpu- show info about cpu
-lsmem- shoe info about ram
-
+lsmem- Show info about ram
+lshw - Show info about hardware componets
 
 
 
