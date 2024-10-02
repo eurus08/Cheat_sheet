@@ -41,3 +41,17 @@ dmidecode --type 17	       -  Show detailed ram and ram slots info
 dmidecode -t processor 	   -  show detailed cpu info
 rm !(<file>)               -  Remove all files in a directory expect for <file> 
 shopt -s extglob           -  Enable use of extended patterns
+
+
+
+
+
+
+##################Bash Scripts####################
+
+#Delete a type of file except a handful#
+find . -maxdepth 1 -type f -name 'd00*' ! -name '*.tex' ! -name '*.pdf' -exec rm "{}" \;
+
+
+
+

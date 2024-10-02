@@ -49,3 +49,5 @@ reset       | HEAD~<1>                                           | Reset the cur
 revert      | <commit>                                           | Create a new commit that reverts changes made by a specific commit. 
 revert      | HEAD~<1>                                           | Create a new commit that reverts the latest commit.               
 
+Prompt try out
+this
