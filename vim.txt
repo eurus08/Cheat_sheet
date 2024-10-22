@@ -1,0 +1,8 @@
+#### Vim Key binding ####
+
+Key bind      | Description
+--------------|-------------------------------------------
+:q            | quit   
+:q! / ZQ      | quit without saving
+:w            | write 
+:wq / :x / ZZ | Save and quit
