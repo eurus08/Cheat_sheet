@@ -9,14 +9,14 @@ which- locate a command
 cd   - change directory
 pwd  - show current working directory
 ls   - list the content of a directory
-touch- create or update the modiifcation time of a file
+touch- create or update the modification time of a file
 mkdir- create a directory
 nano - a simple terminal text editor
 vim  - a rich terminal text editor 
 rm   - delete file or directories 
-mv   - move or rename files or dictories 
+mv   - move or rename files or directories 
 less - display contents of a file
-cat  - concatenate the content of files and display the reseults
+cat  - concatenate the content of files and display the results
 tac  - concatenate and print in reverse
 rev  - display contents of a file in reverse
 head - show the beginning part of a file(ex)
@@ -28,22 +28,23 @@ tee  -
 find - search for files.(ex)
 lscpu- show info about cpu
 lsmem- Show info about ram
-lshw - Show info about hardware componets
+lshw - Show info about hardware components
+wall - Send a message to all termninal/users
+nl   - List the content of a file with each line numbered
 
 
 
 
 
 
-
-### More specific commands###
+############### More specific commands###################################
 dmidecode --type 17	       -  Show detailed ram and ram slots info
 dmidecode -t processor 	   -  show detailed cpu info
 rm !(<file>)               -  Remove all files in a directory expect for <file> 
 shopt -s extglob           -  Enable use of extended patterns
 
 
-
+zsh:1: command not found: s
 
 
 
@@ -51,6 +52,12 @@ shopt -s extglob           -  Enable use of extended patterns
 
 #Delete a type of file except a handful#
 find . -maxdepth 1 -type f -name 'd00*' ! -name '*.tex' ! -name '*.pdf' -exec rm "{}" \;
+
+#Using heredoc#
+<command> << <marker(e.g. EOF)>
+data
+...
+<marker>
 
 
 
