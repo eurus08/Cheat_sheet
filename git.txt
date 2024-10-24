@@ -13,7 +13,7 @@ add         | .                                                  | Add changes t
 commit      | -m <message>                                       | Record changes to the repository with a message.
 commit      | --amend                                            | Amend the previous commit with new changes or a new message.
 branch      |                                                    | List branches.
-branch      | <branch> -v                                        | Create a new branch Verboselly.
+branch      | <branch> -v                                        | Create a new branch verbosely.
 branch      | -d <branch>                                        | Delete a branch if it is merged.
 branch      | -D <branch>                                        | Force delete a branch, even if it is unmerged.
 branch      | -m <new name>                                      | Rename a branch

@@ -29,7 +29,7 @@ find - search for files.(ex)
 lscpu- show info about cpu
 lsmem- Show info about ram
 lshw - Show info about hardware components
-wall - Send a message to all termninal/users
+wall - Send a message to all terminal/users
 nl   - List the content of a file with each line numbered
 env  - List all environment variables
 
@@ -37,13 +37,22 @@ env  - List all environment variables
 
 
 ############### More specific commands ###################################
-dmidecode --type 17	   -  Show detailed ram and ram slots info
-dmidecode -t processor 	   -  show detailed cpu info
-rm !(<file>)               -  Remove all files in a directory expect for <file> 
-shopt -s extglob           -  Enable use of extended patterns
-source <file>              -  Execute commands from file
-export <var>               -  Make var available to child processes (make environment variable) 
-unset <env_var>            -  Remove an environment varible 
+dmidecode --type 17	            -  Show detailed ram and ram slots info
+dmidecode -t processor 	        -  show detailed cpu info
+rm !(<file>)                    -  Remove all files in a directory expect for <file> 
+shopt -s extglob                -  Enable use of extended patterns
+source <file>                   -  Execute commands from file
+export <var>                    -  Make var available to child processes (make environment variable) 
+unset <env_var>                 -  Remove an environment variable 
+tar -cvf <dir>.tar <dir>        -  Create a archive of a file/dir 
+tar -tvf <dir>.tar              -  View an archive file 
+tar -xvf <dir>.tar -C <dir>     -  Extract archived file to new directory
+tar -czvf <dir>.tar.gz <dir>    -  Archive and compress a directory 
+tar -tzvf <dir>.tar.gz          -  View a compressed archive
+tar -xzvf <dir>.tar.gz -c <dir> -  Extract a compressed archive
+zip -r <dir>.zip <dir>          -  Zip a directory
+unzip -d <dir> <dir>.zip        -  Unzip a directory
+ln <source> <link>              -  Create a hard link to the source (-s soft link)
 
 
 
@@ -63,3 +72,27 @@ data
 #Add a new directory to PATH#
 export PATH="$PATH:$HOME/<dir>"
 
+
+
+
+
+########################## Wildcards ########################
+
+	{<>..<>} or {<>,<>}      | Brace expansion (for generation)
+	*                        | wildcard for matching multiple characters
+	?                        | wildcard for matching one character
+	[]                       | wildcard for matching range of values
+	[^]                      | wildcard for matching negative range
+	 
+
+
+
+
+################### Operator and Redirects ##################
+	
+ <command 1> && <command 2>     | AND operator      - runs command 2 if command 1 succeeds
+ <command 1> || <command 2>     | OR operator      - runs command 2 if command 1 fails
+ <command 1> ; <command 2>      | command separator- runs all commands in succession.
+ <command> > <file>             | write output of command to file
+ <command> >> <file>            | append output of command to file 
+ <command 1> | <command 2>      | pipe output of command 1 as argument of command 2

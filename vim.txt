@@ -10,8 +10,9 @@
                                     | 
 # Settings Commands #               |
     :set number                     | show line numbers
-    :set relativenumber             | show line numbers relative to cursor position         
+    :set relativenumber             | show line numbers relative to cursor position       
     :set mouse=a                    | enable use of mouse
+    :colorscheme <color>            | set a colorscheme 
                                     |
                                     |
 # Enter Insert Mode Commands #      |
@@ -21,3 +22,8 @@
     A                               | Enter insert mode at the end of a line
     o                               | Enter insert mode on a new line 
     O                               | Enter insert mode with a new line above
+                                    |
+                                    |
+# Editing commands #                |
+	u 							    | undo
+	Ctrl+r                          | redo
