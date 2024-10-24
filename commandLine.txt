@@ -31,24 +31,24 @@ lsmem- Show info about ram
 lshw - Show info about hardware components
 wall - Send a message to all termninal/users
 nl   - List the content of a file with each line numbered
+env  - List all environment variables
 
 
 
 
-
-
-############### More specific commands###################################
-dmidecode --type 17	       -  Show detailed ram and ram slots info
+############### More specific commands ###################################
+dmidecode --type 17	   -  Show detailed ram and ram slots info
 dmidecode -t processor 	   -  show detailed cpu info
 rm !(<file>)               -  Remove all files in a directory expect for <file> 
 shopt -s extglob           -  Enable use of extended patterns
+source <file>              -  Execute commands from file
+export <var>               -  Make var available to child processes (make environment variable) 
+unset <env_var>            -  Remove an environment varible 
 
 
-zsh:1: command not found: s
 
 
-
-##################Bash Scripts####################
+################## Bash Scripts ####################
 
 #Delete a type of file except a handful#
 find . -maxdepth 1 -type f -name 'd00*' ! -name '*.tex' ! -name '*.pdf' -exec rm "{}" \;
@@ -60,5 +60,6 @@ data
 <marker>
 
 
-
+#Add a new directory to PATH#
+export PATH="$PATH:$HOME/<dir>"
 

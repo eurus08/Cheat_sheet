@@ -1,8 +1,23 @@
-#### Vim Key binding ####
+#### Vim Command in Normal Mode ####
 
-Key bind      | Description
---------------|-------------------------------------------
-:q            | quit   
-:q! / ZQ      | quit without saving
-:w            | write 
-:wq / :x / ZZ | Save and quit
+    Commands                        | Description
+------------------------------------|----------------------------------------------------
+# Exiting and Saving commands #     |
+    :q                              | quit   
+    :q! / ZQ                        | quit without saving
+    :w                              | write 
+    :wq / :x / ZZ                   | save and quit
+                                    | 
+# Settings Commands #               |
+    :set number                     | show line numbers
+    :set relativenumber             | show line numbers relative to cursor position         
+    :set mouse=a                    | enable use of mouse
+                                    |
+                                    |
+# Enter Insert Mode Commands #      |
+    i                               | Enter insert mode before cursor
+    I                               | Enter insert mode at the begin of a line
+    a                               | Enter insert mode after cursor
+    A                               | Enter insert mode at the end of a line
+    o                               | Enter insert mode on a new line 
+    O                               | Enter insert mode with a new line above
