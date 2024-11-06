@@ -1,7 +1,7 @@
 #### Some simple command ####
 date - shows the current date and time
 echo - print a line of text to the stdout
-sort - used to sort a list(ex)
+sort - used to sort a list(ex) (-r) for reverse sorting  (-u) for unique sorting
 man  - view man pages
 cp   - copy a file or directory
 clear- clear the terminal the screen
@@ -19,8 +19,8 @@ less - display contents of a file
 cat  - concatenate the content of files and display the results
 tac  - concatenate and print in reverse
 rev  - display contents of a file in reverse
-head - show the beginning part of a file(ex)
-tail - show the ending part of a file (ex)
+head - show the beginning part of a file(s)
+tail - show the ending part of a file(s) 
 wc   - show number of lines, words or characters in a file.
 tr   - 
 du   - estimate file space usage 
@@ -32,27 +32,33 @@ lshw - Show info about hardware components
 wall - Send a message to all terminal/users
 nl   - List the content of a file with each line numbered
 env  - List all environment variables
-
+paste- Merge files columnwise (can separate with delimiter)
 
 
 
 ############### More specific commands ###################################
-dmidecode --type 17	            -  Show detailed ram and ram slots info
-dmidecode -t processor 	        -  show detailed cpu info
-rm !(<file>)                    -  Remove all files in a directory expect for <file> 
-shopt -s extglob                -  Enable use of extended patterns
-source <file>                   -  Execute commands from file
-export <var>                    -  Make var available to child processes (make environment variable) 
-unset <env_var>                 -  Remove an environment variable 
-tar -cvf <dir>.tar <dir>        -  Create a archive of a file/dir 
-tar -tvf <dir>.tar              -  View an archive file 
-tar -xvf <dir>.tar -C <dir>     -  Extract archived file to new directory
-tar -czvf <dir>.tar.gz <dir>    -  Archive and compress a directory 
-tar -tzvf <dir>.tar.gz          -  View a compressed archive
-tar -xzvf <dir>.tar.gz -c <dir> -  Extract a compressed archive
-zip -r <dir>.zip <dir>          -  Zip a directory
-unzip -d <dir> <dir>.zip        -  Unzip a directory
-ln <source> <link>              -  Create a hard link to the source (-s soft link)
+dmidecode --type 17	                    -  Show detailed ram and ram slots info
+dmidecode -t processor 	                -  show detailed cpu info
+rm !(<file>)                            -  Remove all files in a directory expect for <file> 
+shopt -s extglob                        -  Enable use of extended patterns
+source <file>                           -  Execute commands from file
+export <var>                            -  Make var available to child processes (make environment variable) 
+unset <env_var>                         -  Remove a environment variable 
+tar -cvf <dir>.tar <dir>                -  Create a archive of a file/dir 
+tar -tvf <dir>.tar                      -  View an archive file 
+tar -xvf <dir>.tar -C <dir>             -  Extract archived file to new directory
+tar -czvf <dir>.tar.gz <dir>            -  Archive and compress a directory 
+tar -tzvf <dir>.tar.gz                  -  View a compressed archive
+tar -xzvf <dir>.tar.gz -C <dir>         -  Extract a compressed archive
+zip -r <dir>.zip <dir>                  -  Zip a directory
+unzip -d <dir> <dir>.zip                -  Unzip a directory
+ln <source> <link>                      -  Create a hard link to the source (-s soft link)
+tail -f <file>                          -  View the end lines of a file in real time
+cut -d <delim> -f <col...> <file>       -  Section the contents of file by columns using delim(itor) and col(umn)
+sort -n -t<delim> -k<col> <file>        -  Sort the content of file by lines numerically using delim(itor) and col(umn)
+sort -t<delim> -k<col1> -k<col2> <file> -  Sort the content of file by two columns
+expand -t 4 <file>                      -  Replace every tab character in file with 4 spaces
+unexpand -t 4 <file>                    -  Replace every four space in with tab
 
 
 
