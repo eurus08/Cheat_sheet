@@ -22,9 +22,9 @@ rev  - display contents of a file in reverse
 head - show the beginning part of a file(s)
 tail - show the ending part of a file(s) 
 wc   - show number of lines, words or characters in a file.
-tr   - 
+tr   - used in pipelines for translate character. 
 du   - estimate file space usage 
-tee  - 
+tee  - print to stdin and file at the same time (-a) to append. 
 find - search for files.(ex)
 lscpu- show info about cpu
 lsmem- Show info about ram
@@ -35,9 +35,16 @@ nl   - List the content of a file with each line numbered
 env  - List all environment variables
 paste- Merge files columnwise (can separate with delimiter)
 df   - Check space left on mounted disks (-h) for human readable format
+join - merge two files using matchig columns.
+split- divide bigfile into smaller chunks.
+uniq - return from a sorted list a list without duplicates (-d)returns only duplicated items
 
 
-############### More specific commands ###################################
+
+
+
+
+############################### More specific commands ###################################
 dmidecode --type 17	                       -  Show detailed ram and ram slots info
 dmidecode -t processor 	                   -  Show detailed cpu info
 rm !(<file>)                               -  Remove all files in a directory expect for <file> 
@@ -63,7 +70,7 @@ unexpand -t 4 <file>                       -  Replace every four space in with t
 mount /dev/<disk> /mnt/<disk>              -  Mount disk to a mount point
 umount /dev/<disk>                         -  Unmount disk 
 lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL -  Display all mounted disk with (name, filesystem, size, mounting point and label)
-
+pdftotext <file> - | wc -c                 -  Count the number of words(lines..) in a pdf file.
 
 ################## Bash Scripts ####################
 
