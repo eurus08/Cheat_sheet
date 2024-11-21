@@ -1,48 +1,51 @@
 #### Some simple command ####
-date - shows the current date and time
-echo - print a line of text to the stdout
-sort - used to sort a list(ex) (-r) for reverse sorting  (-u) for unique sorting
-man  - view man pages
-cp   - copy a file or directory
-clear- clear the terminal the screen
-which- locate a command
-cd   - change directory
-pwd  - show current working directory
-ls   - list the content of a directory
-touch- create or update the modification time of a file
-mkdir- create a directory
-nano - a simple terminal text editor
-vim  - a rich terminal text editor 
-rm   - delete file or directories 
-mv   - move or rename files or directories 
-less - display contents of a file
-cat  - concatenate the content of files and display the results
-tac  - concatenate and print in reverse
-rev  - display contents of a file in reverse
-head - show the beginning part of a file(s)
-tail - show the ending part of a file(s) 
-wc   - show number of lines, words or characters in a file.
-tr   - used in pipelines for translate character. 
-du   - estimate file space usage 
-tee  - print to stdin and file at the same time (-a) to append. 
-find - search for files.(ex)
-lscpu- show info about cpu
-lsmem- Show info about ram
-lshw - Show info about hardware components
-lsblk- Show info of all partitions
-wall - Send a message to all terminal/users
-nl   - List the content of a file with each line numbered
-env  - List all environment variables
-paste- Merge files columnwise (can separate with delimiter)
-df   - Check space left on mounted disks (-h) for human readable format
-join - merge two files using matchig columns.
-split- divide bigfile into smaller chunks.
-uniq - return from a sorted list a list without duplicates (-d)returns only duplicated items
-
-
-
-
-
+date   - shows the current date and time
+echo   - print a line of text to the stdout
+sort   - used to sort a list(ex) (-r) for reverse sorting  (-u) for unique sorting
+man    - view man pages
+cp     - copy a file or directory
+clear  - clear the terminal the screen
+which  - locate a command
+cd     - change directory
+pwd    - show current working directory
+ls     - list the content of a directory
+touch  - create or update the modification time of a file
+mkdir  - create a directory
+nano   - a simple terminal text editor
+vim    - a rich terminal text editor 
+rm     - delete file or directories 
+mv     - move or rename files or directories 
+less   - display contents of a file
+cat    - concatenate the content of files and display the results
+tac    - concatenate and print in reverse
+rev    - display contents of a file in reverse
+head   - show the beginning part of a file(s)
+tail   - show the ending part of a file(s) 
+wc     - show number of lines, words or characters in a file.
+tr     - used in pipelines for translate character. 
+du     - estimate file space usage 
+tee    - print to stdin and file at the same time (-a) to append. 
+find   - search for files.(ex)
+lscpu  - show info about cpu
+lsmem  - Show info about ram
+lshw   - Show info about hardware components
+lsblk  - Show info of all partitions
+wall   - Send a message to all terminal/users
+nl     - List the content of a file with each line numbered
+env    - List all environment variables
+paste  - Merge files columnwise (can separate with delimiter)
+df     - Check space left on mounted disks (-h) for human readable format
+join   - merge two files using matchig columns.
+split  - divide bigfile into smaller chunks.
+uniq   - return from a sorted list a list without duplicates (-d)returns only duplicated items
+free   - show a summary of memory usage (-h) for human readable format
+jobs   - Show a list of all suspended process
+fg     - foreground most recent suspended process
+ps     - show running process (-ef) to show all process.
+renice - Change the nice priority of any process. 
+useradd- Create a new user.
+usermod- Modify an existing user
+userdel- Delete a user.
 
 ############################### More specific commands ###################################
 dmidecode --type 17	                       -  Show detailed ram and ram slots info
@@ -71,6 +74,14 @@ mount /dev/<disk> /mnt/<disk>              -  Mount disk to a mount point
 umount /dev/<disk>                         -  Unmount disk 
 lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL -  Display all mounted disk with (name, filesystem, size, mounting point and label)
 pdftotext <file> - | wc -c                 -  Count the number of words(lines..) in a pdf file.
+fg <id>                                    -  Foreground process with job id.
+kill -<signal> <PID>                       -  Send signal to process (sends TERM signal by default)
+kill -l                                    -  Show list of signals
+killall -<signal> <name>                   -  Kill all process with similar name  
+
+
+
+
 
 ################## Bash Scripts ####################
 
@@ -111,3 +122,20 @@ export PATH="$PATH:$HOME/<dir>"
  <command> > <file>             | write output of command to file
  <command> >> <file>            | append output of command to file 
  <command 1> | <command 2>      | pipe output of command 1 as argument of command 2
+ <command> &                    | run command straight to background
+
+
+
+ ########### Server Commands ########################
+  uptime         - Show long the servers has remained online, number of users and server load over last minute, five minute, and 15 minutes.
+ systemctl --type=service  - Show all service and their status 
+
+
+
+
+ ########### Signal ################################
+ TERM - kill a process if possible
+ KILL - Forcefully kill a process
+ TSTP - Stop a process if possile
+ STOP - Forcefully stop a process
+ CONT - Resume a stopped process
