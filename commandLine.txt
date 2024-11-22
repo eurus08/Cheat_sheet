@@ -46,6 +46,16 @@ renice - Change the nice priority of any process.
 useradd- Create a new user.
 usermod- Modify an existing user
 userdel- Delete a user.
+groupadd - create a new group 
+groupmod - modify an existing group 
+groupdel - Delete a group 
+id       - Gives uid,groups,gid and other info about users
+chown    - change owner of a file
+chmod    - Change permission of a file
+chgrp    - Change group ownwership
+
+
+
 
 ############################### More specific commands ###################################
 dmidecode --type 17	                       -  Show detailed ram and ram slots info
@@ -78,6 +88,9 @@ fg <id>                                    -  Foreground process with job id.
 kill -<signal> <PID>                       -  Send signal to process (sends TERM signal by default)
 kill -l                                    -  Show list of signals
 killall -<signal> <name>                   -  Kill all process with similar name  
+usermode -aG <group> <user>                -  Add user to group 
+gpasswd --delete <user> <group>            -  Remove user from group.
+
 
 
 
