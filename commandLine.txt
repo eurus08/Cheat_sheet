@@ -53,6 +53,10 @@ id       - Gives uid,groups,gid and other info about users
 chown    - change owner of a file
 chmod    - Change permission of a file
 chgrp    - Change group ownwership
+passwd   - Modify user password
+su       - switch user
+
+
 
 
 
@@ -90,7 +94,7 @@ kill -l                                    -  Show list of signals
 killall -<signal> <name>                   -  Kill all process with similar name  
 usermode -aG <group> <user>                -  Add user to group 
 gpasswd --delete <user> <group>            -  Remove user from group.
-
+sudo -i                                    -  Login in as root.
 
 
 
@@ -152,3 +156,16 @@ export PATH="$PATH:$HOME/<dir>"
  TSTP - Stop a process if possile
  STOP - Forcefully stop a process
  CONT - Resume a stopped process
+
+
+
+ ######### Systemd #################################
+ systemctl status  <service>    -  Check status of service
+ systemctl start   <service>    -  Start service
+ systemctl stop    <service>    -  Stop service
+ systemctl enable  <service>    -  Allow service to start at boot
+ systemctl disable <service>    -  Prevent service from starting at boot
+ systemctl restart <service>    -  Restart service after editing configuration
+ systemctl daemon-reload        -  Reload all unit files.
+ journalctl -u <service>        -  Show logs of service.q
+
