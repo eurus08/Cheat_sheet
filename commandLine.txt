@@ -8,7 +8,7 @@ clear  - clear the terminal the screen
 which  - locate a command
 cd     - change directory
 pwd    - show current working directory
-ls     - list the content of a directory
+ls     - list the content of a directory (-i) to show inode 
 touch  - create or update the modification time of a file
 mkdir  - create a directory
 nano   - a simple terminal text editor
@@ -34,7 +34,7 @@ wall   - Send a message to all terminal/users
 nl     - List the content of a file with each line numbered
 env    - List all environment variables
 paste  - Merge files columnwise (can separate with delimiter)
-df     - Check space left on mounted disks (-h) for human readable format
+df     - Check space left on mounted disks (-h) for human readable format (-T) for type of filesystem.
 join   - merge two files using matchig columns.
 split  - divide bigfile into smaller chunks.
 uniq   - return from a sorted list a list without duplicates (-d)returns only duplicated items
