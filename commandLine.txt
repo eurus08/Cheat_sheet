@@ -95,7 +95,8 @@ killall -<signal> <name>                   -  Kill all process with similar name
 usermode -aG <group> <user>                -  Add user to group 
 gpasswd --delete <user> <group>            -  Remove user from group.
 sudo -i                                    -  Login in as root.
-
+fdisk <device>                             -  Create new partition table and partition on device
+mkfs.<fs> -n <label> <disk>                -  Format disk with fs filesytem and label
 
 
 
@@ -111,9 +112,11 @@ data
 ...
 <marker>
 
-
 #Add a new directory to PATH#
 export PATH="$PATH:$HOME/<dir>"
+
+#cp file while showing progress#
+cp <file> <destination> & progress -mp $!
 
 
 
