@@ -1,0 +1,58 @@
+#### Header files ####
+stdio.h   - includes functions for input and output (printf and scanf).
+stdlib.h  - includes functions for memory allocation and other functions.
+math.h    - includes functions of mathematical expression like sqrt, sin and cos.
+string.h  - includes functions for string manipulation.
+ctype.h   - includes functions for character testing and mapping.
+stdbool.h - includes functions and methods for use of boolean.
+time.h    - includes functions for working with time and dates.
+limits.h  - includes functions for manipulation of limits of integer-types.
+
+
+
+
+
+
+#### C Built-in Functions ####
+printf
+scanf
+
+
+
+
+#### Syntax of Placeholders ####
+%[parameter$][flags][width][.precision][length]type
+
+*[parameter$]:
+Gives order to the varibles (and allows for reuse of varibales]
+printf("%2$d; %1$d",16,17) prints out - 17;16
+
+*[flags]
+-minus(-)     -: left aligns placeholder in [width]
+-plus(+)      -: prepends plus sign in front of positive integers
+-space( )     -: prepends space in front of positve integers
+-zero(0)      -: fills [width] with zeros.
+-apostrophe(')-: applies thousands seperator 
+
+*[width]
+Sets the character width for a place holder(can be any positive integer)
+
+*[.precision]
+Sets the number of decimal place to display(may be any positive integer)
+for strings it sets the number of characters to display.
+
+*[length]
+Use case is very scares
+
+*type
+-d/i   - signed integer
+-u     - unsigned integer
+-f     - double in normal notation 
+-e     - double in standard notation
+-g     - double in normal or standard notation 
+-x     - unsigned int as hexadecimal number 
+-o     - unsigned int as octal number
+-s     - string
+-c     - character
+-p     - void
+
