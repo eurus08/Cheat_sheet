@@ -54,5 +54,5 @@ Use case is very scares
 -o     - unsigned int as octal number
 -s     - string
 -c     - character
--p     - void
+-p     - void/ pointep
 
