@@ -16,6 +16,8 @@ limits.h  - includes functions for manipulation of limits of integer-types.
 #### C Built-in Functions ####
 printf
 scanf
+puts
+gets
 
 
 
