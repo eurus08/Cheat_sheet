@@ -14,12 +14,15 @@ limits.h  - includes functions for manipulation of limits of integer-types.
 
 
 #### C Built-in Functions ####
+### stdio.h ###
 printf
 scanf
 puts
 gets
 
-
+### string.h ###
+strlen
+strcpyq
 
 
 #### Syntax of Placeholders ####
