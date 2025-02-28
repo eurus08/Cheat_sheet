@@ -19,10 +19,17 @@ printf
 scanf
 puts
 gets
+atexit
+
 
 ### string.h ###
 strlen
 strcpyq
+
+
+### math.h ###
+fmod
+
 
 
 #### Syntax of Placeholders ####

@@ -101,7 +101,7 @@ mkfs.<fs> -n <label> <disk>                -  Format disk with fs filesytem and 
 swapon <swap file or partion>              -  Enable a swap partition or file for pagging and swapping
 swapoff <swap file or partion>             -  Disable a swap partition or file for pagging and swapping
 dmidecode --type <keyword>                 -  Display information on the following keywords (bois, system, baseboard, chassis, processor, memory, cache, connector, slot.
-
+lsb_release -a                             -  Prints all LSB(Linux Standard Base) and Distribution information.
 
 
 ################## Bash Scripts ####################
