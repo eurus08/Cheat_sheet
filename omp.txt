@@ -1,0 +1,160 @@
+@@@@ Cheat sheet for OpenMP with C @@@@
+
+
+@@ Compling omp program @@
+gcc -fopenmp <source.c>
+
+
+@@ Initializing Parallel Region @@
+#pragma omp parallel [clauses]
+{
+/*block*/
+}
+
+@@ Writing Multi-line Directive @@
+#pragma omp parallel defualt(none) private (i, myid) \
+shared(a, n)
+{
+/*block*/
+}
+
+@@ Initrializing loop work sharing in a parallel region @@
+#pragma omp for [clauses]
+for loop(){
+/*block*/
+}
+
+@@ Combine parallel and work sharing shorthand @@
+#pragma omp parallel for [clauses]
+for loop(){
+/*block*/
+}
+
+@@ Initialize a Single region in a parallel region @@
+#pragmam omp single
+{
+/*block*/
+}
+
+@@ Initialize a master region in a parallel region @@
+#pragma omp master
+{
+/*block*/
+}
+note: there is no synchronization using the master 
+
+@@ Intialize a Barrier synchronization directive @@
+#pragma omp barrier
+
+@@ Intializem a Critical region @@
+#pragma omp critical
+{
+/*block*/
+}
+
+@@ Initialize a Atomic directive @@
+#pragma omp atomic
+statement
+
+
+
+
+
+
+@@@ Runtime Library Function @@@
+
+@@ Include Header @@
+#include <omp.h>
+
+@ Get number of threads in a parallel region @
+omp_get_num_threads();
+return 1 if called outside parallel region
+
+@ Get id of each thread @
+omp_get_thread_num();
+
+@ Set number of threads @
+omp_set_num_threads(<int type variable>)
+
+@ Set max number of active parallel levels @
+omp_set_max_active_levels(<int type variable>)
+
+@ Get level of parallelism of thread @
+omp_get_level()
+
+@ Get Id of parent thread of <level> of paralellism @
+omp_get_ancestor_thread_num(<level>)
+
+@ Get the current wall time as a double (in seckonds) @
+omp_get_wtime()
+
+@ Get precision of wtime @
+omp_get_wtick()
+
+
+
+@@ Lock Routines @@
+
+@ Initialize Lock variable @ 
+omp_init_lock(<omp_lock_t type variable pointer>)
+
+@ Set a lock variable with blocking call @
+omp_set_lock(<omp_lock_t type variable poiniter>)
+
+@ Set a lock variable with non-blocking call @
+omp_test_lock(<omp_lock_t type variable poiniter>)
+
+@ Unset a lock variable  @
+omp_unset_lock(<omp_lock_t type variable poiniter>)
+
+@  Free a lock variable @
+omp_test_lock(<omp_lock_t type variable poiniter>)
+
+
+
+@@@ Clauses @@@
+
+@@ Add shared varibles to a parallel region @@
+shared (varList)
+
+@@ Add private variables of a parallel region @@
+private (varList)
+note that variables are uninitialized in the parallel region
+
+@@ Add private variables that are intialized to a parallel region @@
+firstprivate (varList)
+
+@@ Set defualt privacy behaviour of variables in parallel region @@
+default (shared/none)
+
+@@ Reduction @@
+reduction (op:VarList)
+
+@@ Schedule (for loop directive) @@
+schedule (kind[, chunksize])
+kind = static/dynamic/guided/auto/runtime
+
+@@ Number of threads Clause @@
+num_threads (<nthreads>)
+
+@@ Collapse clause for nested loops @@
+collapse (<num_loops>)
+
+
+
+@@@ Environment Varibale @@@
+
+@@ Number of threads @@
+OMP_NUM_THREADS=<nthreads,...>
+
+@@ Runtime Scheduler @@
+OMP_SCHEDULE=dyanmic,4
+
+@@ Nested Parallelism @@
+OMP_NESTED=
+
+@@ Thread Limit @@
+OMP_THREAD_LIMIT=<max_nthreads>
+
+@@ Parallelism Levels @@
+OMP_MAX_ACTIVE_LEVELS=<nlevels>
