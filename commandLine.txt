@@ -121,6 +121,8 @@ export PATH="$PATH:$HOME/<dir>"
 #cp file while showing progress#
 cp <file> <destination> & progress -mp $!
 
+#Create ISO image
+dd bs=4M if=<path to iso> of=<path to drive> status=progress oflag=sync
 
 
 
