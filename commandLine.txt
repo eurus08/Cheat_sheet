@@ -103,7 +103,7 @@ swapoff <swap file or partion>             -  Disable a swap partition or file f
 dmidecode --type <keyword>                 -  Display information on the following keywords (bois, system, baseboard, chassis, processor, memory, cache, connector, slot.
 lsb_release -a                             -  Prints all LSB(Linux Standard Base) and Distribution information.
 pdftoppm -png <pdf> <nameofimages>         - Converts pdf to images of the pages.
-convert <images*.png> <name.pdf>           - Convert group of images into a pdf.
+magick <images*.png> <name.pdf>           - Convert group of images into a pdf.
 
 
 ################## Bash Scripts ####################
