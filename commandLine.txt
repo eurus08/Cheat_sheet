@@ -104,6 +104,9 @@ dmidecode --type <keyword>                 -  Display information on the followi
 lsb_release -a                             -  Prints all LSB(Linux Standard Base) and Distribution information.
 pdftoppm -png <pdf> <nameofimages>         - Converts pdf to images of the pages.
 magick <images*.png> <name.pdf>           - Convert group of images into a pdf.
+lsmod | grep -i nvidia                    - Check if NVIDIA proprietary drivers is installed
+lspci -k | grep -iA3 vga                  - Check if NVIDIA proprietary drivers is in use
+
 
 
 ################## Bash Scripts ####################
