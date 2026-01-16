@@ -106,6 +106,8 @@ pdftoppm -png <pdf> <nameofimages>         - Converts pdf to images of the pages
 magick <images*.png> <name.pdf>           - Convert group of images into a pdf.
 lsmod | grep -i nvidia                    - Check if NVIDIA proprietary drivers is installed
 lspci -k | grep -iA3 vga                  - Check if NVIDIA proprietary drivers is in use
+btrfs check <path to btrfs file system>   - Check btrfs file system for errors
+btrfs check -repair <path>                - Repair btrfs file system with erros
 
 
 
