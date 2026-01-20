@@ -108,6 +108,11 @@ lsmod | grep -i nvidia                    - Check if NVIDIA proprietary drivers 
 lspci -k | grep -iA3 vga                  - Check if NVIDIA proprietary drivers is in use
 btrfs check <path to btrfs file system>   - Check btrfs file system for errors
 btrfs check -repair <path>                - Repair btrfs file system with erros
+btrfs filesystem usage <subvolume>        - Check current usage stats of a btrfs subvolume
+btrfs filesystem df <device>           - Check storage breakdown of a btrfs partition
+btrfs subvolume list <subvolume>          - list all snapshot volumes within a subvolume
+btrfs subvolume snapshot <subvolume> <snapshot_name> - Create a snapshot of a subvolume
+btrfs subvolume create <subvolume_name>   - Create a subvolume on a btrfs partition
 
 
 
